@@ -1,0 +1,26 @@
+{
+  "name": "gagalin-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gagalincheng/gagalin-api.git"
+  },
+  "author": "gagalin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gagalincheng/gagalin-api/issues"
+  },
+  "homepage": "https://github.com/gagalincheng/gagalin-api#readme",
+  "dependencies": {
+    "koa": "^2.13.0",
+    "koa-body": "^4.2.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-route": "^3.2.0",
+    "koa2-cors": "^2.0.6"
+  }
+}
