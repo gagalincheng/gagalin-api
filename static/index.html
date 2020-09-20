@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>gagalincheng</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	</head>
+	<body id="top">
+			<div id="main">
+          <input type="file" name="uploadFile" id="uploadFile"  multiple="multiple" />
+          <button id='tijiao'>提交</button>
+			</div>
+			
+	</body>
+</html>
+
+<script text='javascript'>
+window.onload = function(){
+  $("#tijiao").click(function(){
+    var formData = new FormData();                      // 创建一个form类型的数据
+    console.log($("#uploadFile")[0].files)
+    const list = $("#uploadFile")[0].files;
+    for (let key in list) {
+      formData.append(`file${key}`, list[key]);
+    }
+
+
+　　$.ajax({
+
+　　　　"url": "/upload",
+
+　　　　"type": "post",
+
+　　　　"processData": false, // 将数据转换成对象，不对数据做处理，故 processData: false 
+
+　　　　"contentType": false,    // 不设置数据类型
+
+　　　　"data": formData,
+
+　　　　success: function(data) {
+
+　　　　　　console.log(data)
+
+　　　　},
+
+　　　　error: function(data) {
+
+　　　　}
+
+　　})
+    
+  });
+}
+</script>

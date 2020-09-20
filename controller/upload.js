@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 const main = async function(ctx) {
-  const imgDir = 'photos/';
+  const imgDir = 'static/photos/';
   const filePaths = [];
   const files = ctx.request.files || {};
   for (let key in files) {
